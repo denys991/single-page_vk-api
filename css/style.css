@@ -1,5 +1,6 @@
 header {
     padding: 0 20px;
+    margin-bottom: 10px;
     background-color: #363636;
     min-height: 100px;
     display: flex;
@@ -99,3 +100,191 @@ input[type="text"] {
 .search .reset:hover {
     opacity: 0.8;
 }
+
+
+/******************TABS*******************/
+.main {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.wrapper .active {
+    color: #01839a;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+}
+
+.tabs {
+    margin-left: 1em;
+}
+
+.tab {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 3px 3px 0 0;
+    padding: 28px 50px;
+    display: inline-block;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 2;
+    opacity: 0.5;
+    background: url("../images/tabs-icon.png");
+    background-size: 600px;
+}
+
+.tab_item {
+    border: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.bg-1 {
+    background-position: -169px 157px;
+}
+
+.bg-2 {
+    background-position: -84px 231px;
+}
+
+.bg-3 {
+    background-position: -502px 232px;
+}
+
+.bg-4 {
+    background-position: -167px 306px;
+}
+
+.bg-5 {
+    background-position: -87px 306px;
+}
+
+.bg-6 {
+    background-position: -253px 231px;
+}
+
+.user-info, .album-info {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 15px;
+    color: #858585;
+    font-weight: bold;
+}
+
+/**************************ALBUMS*******************/
+.album-block {
+    padding: 10px 50px 10px 40px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    background: url("../images/arrow-right.png") 95% 50% no-repeat;
+    background-size: 50px;
+    cursor: pointer;
+}
+
+.album-block p {
+    overflow: hidden;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.album-preview {
+    min-width: 150px;
+    float: left;
+    padding: 10px;
+}
+
+p.album-title {
+    font-size: 25px;
+    color: #538cb5;
+    font-weight: bold;
+    font-family: "Abyssinica SIL";
+}
+
+.album-count {
+    padding-left: 30px;
+    background: url("../images/file.png") 0 50% no-repeat;
+    background-size: 21px;
+}
+
+.album-created {
+    padding-left: 30px;
+    background: url("../images/clock.png") 0 50% no-repeat;
+    background-size: 21px;
+}
+
+.exeption {
+    color: #ff0000;
+}
+
+.album-info {
+    padding-left: 115px;
+    background: url(../images/open-folder.png) no-repeat 38px 0;
+    background-size: 53px;
+    position: relative;
+    font-size: 25px;
+}
+
+.album-info span {
+    position: absolute;
+    left: 5px;
+    top: 6%;
+    width: 31px;
+    height: 43px;
+    background: url(../images/arrow-back.png) no-repeat 50% 50%;
+    background-size: 42px 42px;
+    cursor: pointer;
+}
+
+/*********************PHOTOS************************/
+.foto-block {
+    position: relative;
+    margin: 10px;
+    width: 23%;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+render-photos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.select-btn {
+    position: absolute;
+    padding: 5px 5px 5px 50px;
+    width: 100%;
+    bottom: 0;
+    border: 0;
+    text-decoration: underline;
+    background: #f5f5f5 url("../images/selext.png") 10px 50% no-repeat;
+    background-size: 32px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

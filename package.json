@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/denys991/single-page_vk-api.git"
   },
-  "author": "denys lysenko",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/denys991/single-page_vk-api/issues"
   },
-  "homepage": "https://github.com/denys991/single-page_vk-api#readme"
+  "homepage": "https://github.com/denys991/single-page_vk-api#readme",
+  "dependencies": {
+    "angular-momentjs": "^0.2.2",
+    "moment": "^2.18.1"
+  }
 }
