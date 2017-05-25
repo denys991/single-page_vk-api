@@ -264,11 +264,27 @@ render-photos {
     cursor: pointer;
 }
 
+/******************************SHOWPHOTO*************************/
+show-photo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+show-photo p {
+    align-self: flex-start;
+    font-size: 20px;
+    margin: 10px;
+    color: #000000;
+}
 
-
-
-
+.tooltip-inner {
+    font-size: 20px;
+    min-width: 369px ;
+    padding: 30px 10px;
+}
 
 
 

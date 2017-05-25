@@ -1,5 +1,5 @@
 app.controller('userCtrl', function ($scope) {
-
+    
     userPr = new Promise(function(resolve, reject) {
 
         VK.Api.call('users.get', {}, function(r) {

@@ -5,6 +5,7 @@
     <title>VK-API</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app="vk-api">
@@ -29,13 +30,17 @@
             <div class="tab_item">
                 <div ng-controller='albumsCtrl'>
                     <div ng-controller='photosCtrl'>
-                        <div ng-show="!rend_photos">
+                        <div ng-show="rend_albums">
                             <h2 class="user-info" ng-controller='userCtrl'>WELCOME, {{ name }}</h2>
                             <render-albums></render-albums>
                         </div>
                         <div ng-show="rend_photos" class="foto-conteiner">
                             <h2 class="album-info"><span ng-click="backToAlbum()"></span>{{ album_title }}</h2>
                             <render-photos></render-photos>
+                        </div>
+                        <div ng-show="photo" class="show-foto">
+                            <h2 class="album-info"><span ng-click="backToPhotos()"></span>Назва відсутня</h2>
+                            <show-photo></show-photo>
                         </div>
                     </div>
                 </div>
@@ -58,42 +63,22 @@
         </div>
     </div>
 </div>
-
-
-
-
-<div ng-controller='photosCtrl'></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-
-<script type="text/javascript" src="node_modules/angular-momentjs/angular-momentjs.min.js"></script>
+<script src="node_modules/angular-momentjs/angular-momentjs.min.js"></script>
 <script src="js/app.module.js"></script>
 <script src="js/controllers/albumsCtrl.js"></script>
 <script src="js/controllers/userCtrl.js"></script>
 <script src="js/controllers/photosCtrl.js"></script>
 <script src="js/directives/renderAlbums.js"></script>
 <script src="js/directives/renderPhotos.js"></script>
+<script src="js/directives/showPhoto.js"></script>
 <script src="https://vk.com/js/api/openapi.js?146" type="text/javascript"></script>
 <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 <script src="https://vk.com/js/api/openapi.js?146" type="text/javascript"></script>
-<script type="text/javascript">
+<script>
     VK.init({
         apiId: 6043335
     });
@@ -116,12 +101,13 @@
         }
     });
 </script>
-<script type="text/javascript">
+<script>
     $(".tab_item").not(":first").hide();
     $(".wrapper .tab").click(function() {
         $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
         $(".tab_item").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
 </script>
+<script src="js/libs/jquery.lazyload.min.js"></script>
 </body>
 </html>
