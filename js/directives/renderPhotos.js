@@ -7,7 +7,6 @@ app.directive('renderPhotos', function () {
                       '<div class="select-btn" ng-click="showPhoto(photo.src_small, photo.src_big, photo.src_xbig, photo.src_xxbig, photo.src_xxxbig, index)">Select</div>' +
                   '</div>',
         link: function (scope, element, attrs) {
-            
         }
     }
 });

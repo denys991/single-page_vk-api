@@ -12,13 +12,13 @@ app.controller('photosCtrl', function ($scope) {
         $scope.screen = window.screen.availWidth;
 
         if ($scope.screen >= 1200) {
-            $scope.photo_link = size4;
+            $scope.photo_link = size4 ||size3 || size2 || size1 ;
         } else if ($scope.screen >= 992 ) {
-            $scope.photo_link = size3;
+            $scope.photo_link = size3 ||size2 || size1 || size0;
         } else if ($scope.screen >= 768) {
-            $scope.photo_link = size2;
+            $scope.photo_link = size2 ||size1 || size0;
         } else {
-            $scope.photo_link = size1;
+            $scope.photo_link = size1 || size0;
         }
 
         $scope.rend_albums = false;
@@ -56,18 +56,13 @@ app.controller('photosCtrl', function ($scope) {
         });
 
         photosPr.then(function (result) {
-            console.log(result);
             $(function(){
 
                 $("img.lazyImg").lazyload({
                     effect: "fadeIn"
                 });
-            });
-
-            $(function() {
                 $('[data-toggle="tooltip"]').tooltip();
             });
-
             $scope.$digest();
         })
     };

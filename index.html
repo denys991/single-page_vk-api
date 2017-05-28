@@ -57,8 +57,13 @@
             <div class="tab_item">
                 <h2 class="user-info" ng-controller='userCtrl'>WELCOME, {{ name }}</h2>
             </div>
-            <div class="tab_item">
-                <h2 class="user-info" ng-controller='userCtrl'>WELCOME, {{ name }}</h2>
+            <div class="tab_item" ng-controller='uploadCtrl'>
+                <h2 class="user-info">Завантаження файлу</h2>
+                <upload-photo></upload-photo>
+                <form>
+                    <input type="file" id="test" name="image">
+                    <button type="button" id="upload">Send</button>
+                </form>
             </div>
         </div>
     </div>
@@ -72,9 +77,11 @@
 <script src="js/controllers/albumsCtrl.js"></script>
 <script src="js/controllers/userCtrl.js"></script>
 <script src="js/controllers/photosCtrl.js"></script>
+<script src="js/controllers/uploadCtrl.js"></script>
 <script src="js/directives/renderAlbums.js"></script>
 <script src="js/directives/renderPhotos.js"></script>
 <script src="js/directives/showPhoto.js"></script>
+<script src="js/directives/uploadPhoto.js"></script>
 <script src="js/libs/jquery.lazyload.min.js"></script>
 <script src="https://vk.com/js/api/openapi.js?146" type="text/javascript"></script>
 <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
@@ -85,7 +92,6 @@
     });
 
     VK.Auth.getLoginStatus (function (response) {
-        console.log(response);
         if (!response.session) {
             VK.Auth.login(function(response) {
                 if (response.session) {

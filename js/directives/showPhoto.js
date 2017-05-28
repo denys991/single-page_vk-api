@@ -4,9 +4,9 @@ app.directive('showPhoto', function () {
         scope: false,
         template: '<div>' +
                       '<img src="{{photo_link}}">' +
-                      '<p><b>Количество отметок Мне нравится: </b> {{ likes }}</p>' +
-                      '<p><b>Количество комментариев к фотографии: </b> {{ comments }}</p>' +
-                      '<p><b>Текст описания фотографии: </b> {{ text }}</p>' +
+                      '<p>Кількість відміток "Мені подобається": <span>{{ likes }}</span></p>' +
+                      '<p>Кількість коментарів до фотографії: <span>{{ comments }}</span></p>' +
+                      '<p>Текст опису фотографії: <span>{{ text }}</span></p>' +
                   '</div>',
         link: function (scope, element, attrs) {
         }

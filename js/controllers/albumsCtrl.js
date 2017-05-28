@@ -22,7 +22,6 @@ app.controller('albumsCtrl', function ($scope, $moment) {
     });
 
     albumsPr.then(function (result) {
-        console.log(result);
         $scope.$digest();
     })
 
