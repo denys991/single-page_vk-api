@@ -31,7 +31,7 @@ app.controller('uploadCtrl', function ($scope) {
         
         var xhr = new XMLHttpRequest();
         xhr.open("POST", $scope.url, true);
-        xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+        xhr.setRequestHeader("Access-Control-Allow-Origin","http://localhost:3000");
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         xhr.setRequestHeader('Access-Control-Allow-Credentials', 'true');
         xhr.send(data);
